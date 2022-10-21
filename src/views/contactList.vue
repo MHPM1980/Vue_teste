@@ -3,10 +3,7 @@
         <div >
             <h1 class="text-white p-3">Gestão de Contactos</h1>
         </div>
-        <div class="d-flex flex-row justify-content-between mt-4 align-items-end gap-4">  
-            <div class="text-white">
-                <p>Tarefas ({{this.selected}}/{{getCounter}})</p>
-            </div>
+        <div class="d-flex flex-row justify-content-between mt-4 align-items-end gap-4"> 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 
                 <button type="button" class="btn btn-primary border-white" @click="adicionar">Adicionar</button>
