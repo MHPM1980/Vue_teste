@@ -3,14 +3,17 @@
         <div >
             <h1 class="text-white p-3">Gestão de Contactos</h1>
         </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn btn-primary border-white" @click="contacts">Contactos</button>
+            </div>
         <div class="border border-white d-flex flex-column mt-4 p-4">
             <form @submit.prevent = "editar($event)">
                 <div class="d-flex flex-row justify-content-end align-items-end mt-4 gap-4">
                     <div>
-                        <button class="border border-white bg-primary">Editar</button>
+                        <button type="button" class="btn btn-primary border-white">Editar</button>
                     </div>
                     <div>
-                        <button class="border border-white bg-danger" @click = "eliminar">Eliminar</button>
+                        <button type="button" class="btn btn-danger border-white" @click = "eliminar">Eliminar</button>
                     </div>
                 </div>
                 <div class="border border-white d-flex p-4 my-3">
@@ -28,8 +31,6 @@
 
 <script>
     import { contactStore } from '../store/contactStore';
-    import { mapState } from 'pinia';
-    import  addContact  from '../models/addContact';
 
     export default {
         setup() {
@@ -64,7 +65,11 @@
             eliminar(){
                 this.contactStoreU.delete(this.$route.params.id)
                 this.$router.push({ name: "contactList" });
-            }
+            },
+
+            contacts(){
+                this.$router.push({name: "contactList"});
+            },
         }
     }
 
