@@ -10,7 +10,7 @@
             <form @submit.prevent = "editar($event)">
                 <div class="d-flex flex-row justify-content-end align-items-end mt-4 gap-4">
                     <div>
-                        <button type="button" class="btn btn-primary border-white">Editar</button>
+                        <button class="btn btn-primary border-white">Editar</button>
                     </div>
                     <div>
                         <button type="button" class="btn btn-danger border-white" @click = "eliminar">Eliminar</button>
